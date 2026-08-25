@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: aiis-postgres
+    environment:
+      POSTGRES_DB: netflix
+      POSTGRES_USER: appuser
+      POSTGRES_PASSWORD: app@123
+    ports:
+      - "5432:5432"
+    volumes:
+      - aiis-pgdata:/var/lib/postgresql/data
+
+volumes:
+  aiis-pgdata:
