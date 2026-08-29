@@ -101,3 +101,5 @@ Thumbs.db
 .certs/
 privateKey.pem
 src/main/resources/privateKey.pem
+
+/backups/
