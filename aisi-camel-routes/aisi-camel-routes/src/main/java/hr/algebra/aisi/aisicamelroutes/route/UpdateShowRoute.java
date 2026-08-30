@@ -88,7 +88,7 @@ public class UpdateShowRoute extends RouteBuilder {
 
                 .to("file:" + AppConfig.OUTPUT_DIR
                         + "?fileName=update-show-id${exchangeProperty.showId}-${date:now:yyyyMMdd-HHmmss}.json")
-
+                .to("direct:forwardToBroker")
                 .log("[update-show] Show ${exchangeProperty.showId} updated.");
     }
 }

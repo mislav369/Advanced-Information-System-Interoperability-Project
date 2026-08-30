@@ -62,7 +62,6 @@ public class CreateShowRoute extends RouteBuilder {
 
         from("timer:createShow?period=30000&delay=5000")
                 .routeId("create-show")
-
                 .process(exchange -> {
                     String payload = NEW_SHOWS[showIndex % NEW_SHOWS.length];
                     showIndex++;
@@ -71,20 +70,17 @@ public class CreateShowRoute extends RouteBuilder {
                     exchange.setProperty("targetEndpoint", AppConfig.NETFLIX_API_BASE);
                     exchange.setProperty("requestBody", payload);
                 })
-
                 .process(authHeaderProcessor)
                 .setHeader(Exchange.HTTP_METHOD, constant("POST"))
                 .setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
                 .setHeader("Accept", constant("application/json"))
-
                 .log("[create-show] POST ${exchangeProperty.targetEndpoint}")
                 .to(AppConfig.NETFLIX_API_BASE + "?bridgeEndpoint=true")
                 .convertBodyTo(String.class)
                 .process(loggingProcessor)
-
                 .to("file:" + AppConfig.OUTPUT_DIR
                         + "?fileName=create-show-${date:now:yyyyMMdd-HHmmss}.json")
-
+                .to("direct:forwardToBroker")
                 .log("[create-show] Response saved.");
     }
 }

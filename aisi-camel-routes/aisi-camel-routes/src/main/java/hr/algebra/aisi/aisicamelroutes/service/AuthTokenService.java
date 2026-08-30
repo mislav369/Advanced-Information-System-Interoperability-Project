@@ -16,6 +16,14 @@ public class AuthTokenService {
 
     private final HttpClient client = HttpClient.newHttpClient();
     private final ObjectMapper objectMapper = new ObjectMapper();
+    private String token;
+
+    public synchronized String getToken() throws Exception {
+        if (token == null) {
+            token = fetchToken();
+        }
+        return token;
+    }
 
         public String fetchToken() throws Exception {
         String requestBody = objectMapper.writeValueAsString(

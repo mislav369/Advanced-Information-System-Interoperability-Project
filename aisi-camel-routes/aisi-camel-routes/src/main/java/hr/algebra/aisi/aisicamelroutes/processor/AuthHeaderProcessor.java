@@ -15,7 +15,7 @@ public class AuthHeaderProcessor implements Processor {
 
     @Override
     public void process(Exchange exchange) throws Exception {
-        String token = authTokenService.fetchToken();
+        String token = authTokenService.getToken();
         exchange.getIn().setHeader("Authorization", "Bearer " + token);
         exchange.getIn().setHeader("Origin", AppConfig.ORIGIN);
     }

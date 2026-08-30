@@ -1,0 +1,59 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Exchanges processed (total)",
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "gridPos": { "h": 6, "w": 6, "x": 0, "y": 0 },
+      "targets": [ { "expr": "sum(camel_exchanges_total)", "refId": "A" } ]
+    },
+    {
+      "type": "stat",
+      "title": "Exchanges succeeded (total)",
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "gridPos": { "h": 6, "w": 6, "x": 6, "y": 0 },
+      "targets": [ { "expr": "sum(camel_exchanges_succeeded_total)", "refId": "A" } ]
+    },
+    {
+      "type": "stat",
+      "title": "Exchanges failed (total)",
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "gridPos": { "h": 6, "w": 6, "x": 12, "y": 0 },
+      "targets": [ { "expr": "sum(camel_exchanges_failed_total)", "refId": "A" } ]
+    },
+    {
+      "type": "stat",
+      "title": "Routes running",
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "gridPos": { "h": 6, "w": 6, "x": 18, "y": 0 },
+      "targets": [ { "expr": "count(count by (routeId) (camel_exchanges_total))", "refId": "A" } ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Camel exchanges processed (rate / sec)",
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "gridPos": { "h": 9, "w": 12, "x": 0, "y": 6 },
+      "targets": [ { "expr": "sum(rate(camel_exchanges_succeeded_total[1m])) by (routeId)", "legendFormat": "{{routeId}}", "refId": "A" } ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Camel exchange failures (rate / sec)",
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "gridPos": { "h": 9, "w": 12, "x": 12, "y": 6 },
+      "targets": [ { "expr": "sum(rate(camel_exchanges_failed_total[1m])) by (routeId)", "legendFormat": "{{routeId}}", "refId": "A" } ]
+    }
+  ],
+  "refresh": "10s",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [ "camel", "aisi" ],
+  "time": { "from": "now-15m", "to": "now" },
+  "title": "AISI Camel Routes",
+  "uid": "aisi-camel",
+  "version": 1
+}

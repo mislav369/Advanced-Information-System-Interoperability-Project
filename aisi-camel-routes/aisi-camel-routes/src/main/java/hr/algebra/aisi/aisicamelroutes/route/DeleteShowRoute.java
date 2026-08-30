@@ -83,7 +83,7 @@ public class DeleteShowRoute extends RouteBuilder {
 
                 .to("file:" + AppConfig.OUTPUT_DIR
                         + "?fileName=delete-show-id${exchangeProperty.createdShowId}-${date:now:yyyyMMdd-HHmmss}.json")
-
+                .to("direct:forwardToBroker")
                 .log("[delete-show] Temp show ${exchangeProperty.createdShowId} deleted.");
     }
 }

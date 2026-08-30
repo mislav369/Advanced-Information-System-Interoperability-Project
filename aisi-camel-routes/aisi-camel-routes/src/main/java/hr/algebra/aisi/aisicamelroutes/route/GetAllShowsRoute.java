@@ -47,7 +47,7 @@ public class GetAllShowsRoute extends RouteBuilder {
 
                 .to("file:" + AppConfig.OUTPUT_DIR
                         + "?fileName=get-all-shows-${date:now:yyyyMMdd-HHmmss}.json")
-
+                .to("direct:forwardToBroker")
                 .log("[get-all-shows] Response saved to " + AppConfig.OUTPUT_DIR);
     }
 }
