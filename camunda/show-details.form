@@ -1,0 +1,63 @@
+{
+  "components": [
+    {
+      "label": "Title",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1q9791x",
+        "columns": null
+      },
+      "id": "Field_1j686pp",
+      "key": "title"
+    },
+    {
+      "label": "Show Type",
+      "values": [
+        {
+          "label": "MOVIE",
+          "value": "MOVIE"
+        },
+        {
+          "label": "TV_SHOW",
+          "value": "TV_SHOW"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_1bpzava",
+        "columns": null
+      },
+      "id": "Field_1nik62g",
+      "key": "showType"
+    },
+    {
+      "label": "Release Year",
+      "type": "number",
+      "layout": {
+        "row": "Row_1vs069f",
+        "columns": null
+      },
+      "id": "Field_10dh5gg",
+      "key": "releaseYear"
+    },
+    {
+      "label": "Date Added",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_09pwdd9",
+        "columns": null
+      },
+      "id": "Field_13ihu2h",
+      "key": "dateAdded"
+    }
+  ],
+  "type": "default",
+  "id": "show-details-form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.9.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.50.1"
+  },
+  "schemaVersion": 19
+}

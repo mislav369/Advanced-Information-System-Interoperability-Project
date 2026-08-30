@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "label": "Cast Members",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1gcyqxt",
+        "columns": null
+      },
+      "id": "Field_01d6pro",
+      "key": "castMembers"
+    },
+    {
+      "label": "Director",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_04thmn3",
+        "columns": null
+      },
+      "id": "Field_0vk4tcm",
+      "key": "director"
+    }
+  ],
+  "type": "default",
+  "id": "cast-form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.9.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.50.1"
+  },
+  "schemaVersion": 19
+}

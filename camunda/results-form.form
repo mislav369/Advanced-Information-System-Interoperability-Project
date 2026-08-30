@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "type": "table",
+      "layout": {
+        "row": "Row_1cms5bp",
+        "columns": null
+      },
+      "label": "Table",
+      "rowCount": 10,
+      "columns": [
+        {
+          "label": "ID",
+          "key": "id"
+        },
+        {
+          "label": "Title",
+          "key": "title"
+        },
+        {
+          "label": "Type",
+          "key": "showType"
+        },
+        {
+          "label": "Year",
+          "key": "releaseYear"
+        }
+      ],
+      "id": "Field_0q1ucpr",
+      "dataSource": "=allShows"
+    }
+  ],
+  "type": "default",
+  "id": "results-form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.9.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.50.1"
+  },
+  "schemaVersion": 19
+}

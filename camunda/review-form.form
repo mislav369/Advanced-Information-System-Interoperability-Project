@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "label": "Decision",
+      "values": [
+        {
+          "label": "approve",
+          "value": "approve"
+        },
+        {
+          "label": "reject",
+          "value": "reject"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0g9xs83",
+        "columns": null
+      },
+      "id": "Field_1q4mo5h",
+      "key": "decision"
+    }
+  ],
+  "type": "default",
+  "id": "review-form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.9.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.50.1"
+  },
+  "schemaVersion": 19
+}

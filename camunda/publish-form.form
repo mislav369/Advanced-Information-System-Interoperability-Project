@@ -1,0 +1,23 @@
+{
+  "components": [
+    {
+      "label": "Checkbox",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_14q1ox0",
+        "columns": null
+      },
+      "id": "Field_0ztfpn9",
+      "key": "confirmed"
+    }
+  ],
+  "type": "default",
+  "id": "publish-form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.9.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.50.1"
+  },
+  "schemaVersion": 19
+}

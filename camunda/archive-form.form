@@ -1,0 +1,23 @@
+{
+  "components": [
+    {
+      "label": "Confirm Archive",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1k3hg4l",
+        "columns": null
+      },
+      "id": "Field_0ng7h9p",
+      "key": "confirmed"
+    }
+  ],
+  "type": "default",
+  "id": "archive-form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.9.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.50.1"
+  },
+  "schemaVersion": 19
+}

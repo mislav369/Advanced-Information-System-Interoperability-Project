@@ -1,0 +1,23 @@
+{
+  "components": [
+    {
+      "label": "Number of Seasons",
+      "type": "number",
+      "layout": {
+        "row": "Row_1mwgl2x",
+        "columns": null
+      },
+      "id": "Field_0rgk5kt",
+      "key": "numberOfSeasons"
+    }
+  ],
+  "type": "default",
+  "id": "seasons-form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.9.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.50.1"
+  },
+  "schemaVersion": 19
+}
