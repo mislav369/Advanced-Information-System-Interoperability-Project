@@ -102,4 +102,5 @@ Thumbs.db
 privateKey.pem
 src/main/resources/privateKey.pem
 
-/backups/
+backups/
+output/
